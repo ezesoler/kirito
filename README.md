@@ -1,7 +1,7 @@
 # kirito
 App de prode para Mundial Rusia 2018
 
-App en Ionic
-API con Slim Framework
-Backend con Codeigniter
-BD MySQL
+<p>App en Ionic</p>
+<p>API con Slim Framework</p>
+<p>Backend con Codeigniter</p>
+<p>BD MySQL</p>
