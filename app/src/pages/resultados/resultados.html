@@ -1,0 +1,56 @@
+<!--
+  Generated template for the ResultadosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title text-uppercase>resultados</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bg-01" #content>
+    <div *ngIf= "!resultados" class="nop">
+        <h1>TODAVÍA NO ARRANCÓ EL MUNDIAL...</h1>
+        <img class="pipita" src="./assets/imgs/pipita.png" />
+    </div>
+    <ion-grid ng-else>
+        <ion-row class="row border_bottom" text-uppercase text-center *ngFor="let partido of resultados" justify-content-center align-items-center (click)="itemSelected(partido.id)">
+            <ion-col col-3 text-center>
+                <p><img src="./assets/imgs/flags/{{partido.local}}.png" height="24"></p><p class="gold">{{partido.nombreLocal}}</p>
+            </ion-col>
+            <ion-col col-2 text-uppercase text-center>
+                <p class="txt_predicciones">{{partido.marcadorLocal}}</p>
+            </ion-col>
+            <ion-col col-2 text-uppercase class="gold">
+                <p>{{partido.fase}}</p>
+                <p>{{partido.fecha}}</p>
+            </ion-col>
+            <ion-col col-2 text-right>
+                <p class="txt_predicciones">{{partido.marcadorVisitante}}</p>
+            </ion-col>
+            <ion-col col-3 text-uppercase text-center>
+                <p><img src="./assets/imgs/flags/{{partido.visitante}}.png" height="24"></p><p class="gold">{{partido.nombreVisitante}}</p>
+            </ion-col>
+            <div class="result">
+                <ion-row col-6 class="gold" justify-content-center align-items-center style="margin: 0 auto;">
+                        <p>{{partido.prediccionLocal}}</p>
+                        <div [ngSwitch]="partido.result">
+                            <ion-icon *ngSwitchCase="1" class="win" ios="ios-done-all" md="md-done-all"></ion-icon>
+                            <ion-icon *ngSwitchCase="2" class="draw" ios="ios-checkmark" md="md-checkmark"></ion-icon>
+                            <ion-icon *ngSwitchCase="0" class="lose" ios="ios-close" md="md-close"></ion-icon>
+                        </div>
+                        <p>{{partido.prediccionVisitante}}</p>
+                </ion-row>
+            </div>  
+          </ion-row>
+          
+      </ion-grid>
+</ion-content>

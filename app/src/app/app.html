@@ -1,0 +1,19 @@
+<ion-menu [content]="content" class="bg-01">
+
+    <ion-content class="">
+        <div class="logo">
+            <img center src="./assets/imgs/logo.png" height="150">
+        </div>
+      <ion-list class="list_menu">
+        <button class="list_menu" menuClose ion-item text-uppercase *ngFor="let p of pages" [class.activeMenu]="checkActive(p)" (click)="openPage(p)">
+          {{p.title}}
+          <div *ngIf= "p.title == 'Forobardo' && count > 0" class="notification">
+              {{count}}
+          </div>
+        </button>
+      </ion-list>
+    </ion-content>
+  
+  </ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

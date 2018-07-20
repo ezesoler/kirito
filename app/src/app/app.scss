@@ -1,0 +1,110 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+@import "../theme/icons";
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('../assets/fonts/Roboto-Bold-webfont.eot');
+    src: url('../assets/fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/Roboto-Bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('../assets/fonts/Roboto-Light-webfont.eot');
+    src: url('../assets/fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/Roboto-Light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotothin';
+    src: url('../assets/fonts/Roboto-Thin-webfont.eot');
+    src: url('../assets/fonts/Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/Roboto-Thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../assets/fonts/Roboto-Regular-webfont.eot');
+    src: url('../assets/fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/Roboto-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoblack';
+    src: url('../assets/fonts/Roboto-Black-webfont.eot');
+    src: url('../assets/fonts/Roboto-Black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/Roboto-Black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.bg-01{
+    background: -webkit-linear-gradient(180deg, rgb(0, 97, 165), rgb(7, 60, 119));
+    background: linear-gradient(180deg, rgb(0, 97, 165), rgb(7, 60, 119));
+}
+
+.logo{
+    background-color: white; 
+    text-align: center; 
+    border-top: #bb993a solid 5px;
+    border-bottom: 2px dotted #e5dea0;
+}
+
+.list_menu{
+    background-color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    color: #005c9f;
+    text-align: center;
+    padding-bottom: 0.4rem;
+    padding-top: 0.4rem;
+}
+
+.list-md .item-block .item-inner {
+    border-bottom: 0px solid #dedede;
+}
+
+.activeMenu {
+    color: #ffffff;
+    background-color: #005c9f;
+}
+
+.notification {
+    float: right;
+    background: #fd0404;
+    border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.6em;
+    text-align: center;
+    width: 1.8em;
+    padding-left: 3px;
+  }

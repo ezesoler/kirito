@@ -1,0 +1,56 @@
+page-estadisticas {
+
+    .row{
+        border-bottom: 1px dashed #bb993a;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    input{
+        background-color: #ffffff !important;
+        border: 0px solid #bb993a !important;
+        padding: 9px 1px !important;
+        border-radius: 3px!important;
+    }
+
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+        color: #e5dea0;
+        background-color: transparent;
+    }
+
+    .toolbar-title-md {
+        font-size: 1.4rem!important;
+        font-weight: 400!important;
+        letter-spacing: 2px;
+        color:#e5dea0;
+    }
+
+    .toolbar-background-md{
+        background: -webkit-linear-gradient(180deg, rgb(208, 31, 38), rgb(144, 22, 25));
+        background: linear-gradient(180deg, rgb(208, 31, 38), rgb(144, 22, 25));
+        border-top: 5px solid #bb993a;
+    }
+
+    .bg-01{
+        background: -webkit-linear-gradient(180deg, rgb(0, 97, 165), rgb(7, 60, 119));
+        background: linear-gradient(180deg, rgb(0, 97, 165), rgb(7, 60, 119));
+    }
+
+    p.estadisticas{
+        color: #ffffff;
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+        text-align: center;
+        font-weight: 300;
+        border-bottom: 1px dashed #2a86ca;
+        padding-bottom: 3rem;
+        padding-top: 1rem;
+    }
+
+        p.estadisticas span{
+            color: #e5dea0;
+            font-size: 6rem;
+            display: block;
+            font-weight: 300;
+        }
+
+}

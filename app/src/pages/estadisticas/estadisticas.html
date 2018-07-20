@@ -1,0 +1,40 @@
+<!--
+  Generated template for the EstadisticasPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title text-uppercase>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bg-01">
+  <div>
+    <p class="estadisticas">
+      <span>{{goles}}/{{partidos}}</span>
+      ACIERTO EN GOLES
+    </p>
+  </div>
+
+  <div>
+    <p class="estadisticas">
+      <span>{{resultados}}/{{partidos}}</span>
+      ACIERTO EN RESULTADOS
+    </p>
+  </div>
+
+  <div>
+    <p class="estadisticas">
+      <span>{{efectividad}}<small>%</small></span>
+      PORCENTAJE DE EFECTIVIDAD
+    </p>
+  </div>
+</ion-content>

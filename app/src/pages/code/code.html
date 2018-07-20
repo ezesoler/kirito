@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-uppercase>
+        <img style="padding-top: 3px; float: right;" center src="./assets/imgs/logo_menu.png" height="50">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="bg-01">
+  <p text-uppercase class="tit_presentacion-02">
+      Activar usuario!
+  </p>
+  <p class="tit_presentacion">
+    Bueno, ahora lo que tenés que hacer es ingresar tu nombre y el código que se te envio al email:
+  </p>
+  <ion-list>
+    <ion-item class="item">
+      <ion-label floating>Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+    <ion-item class="item">
+      <ion-label floating>Código</ion-label>
+      <ion-input type="number" [(ngModel)]="codigo"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div>
+    <button ion-button color="light" block (click)="sendCodeAndName()">ENVIAR</button>
+  </div>
+
+</ion-content>

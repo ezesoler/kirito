@@ -1,0 +1,111 @@
+page-partido {
+    .toolbar-title-md {
+        font-size: 1.4rem!important;
+        font-weight: 400!important;
+        letter-spacing: 2px;
+    }
+    
+    p{
+        text-align:center;padding:0;margin:0;
+    }
+    .row{
+        
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    .border_bottom{
+        border-bottom: 1px dashed #bb993a;
+    }
+
+    input{
+        background-color: #ffffff !important;
+        border: 0px solid #bb993a !important;
+        padding: 9px 1px !important;
+        border-radius: 3px!important;
+    }
+
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+        color: #e5dea0;
+        background-color: transparent;
+    }
+
+    .toolbar-title-md {
+        padding: 0 12px;
+        font-size: 2rem;
+        font-weight: 500;
+        color: #e5dea0;
+    }
+
+    .toolbar-background-md{
+        background: -webkit-linear-gradient(180deg, rgb(208, 31, 38), rgb(144, 22, 25));
+        background: linear-gradient(180deg, rgb(208, 31, 38), rgb(144, 22, 25));
+        border-top: 5px solid #bb993a;
+    }
+
+    .bg-01{
+        background: -webkit-linear-gradient(180deg, rgb(0, 97, 165), rgb(7, 60, 119));
+        background: linear-gradient(180deg, rgb(0, 97, 165), rgb(7, 60, 119));
+    } 
+ 
+    .gold{
+        color: #e5dea0;
+    }
+
+    ion-grid p{
+        color: #e5dea0;
+        font-weight: 500;
+        font-size: 1.0rem;
+    }
+
+    .txt_predicciones{
+        color: #ffffff!important;
+        text-align: center;
+        letter-spacing: 3px;
+        font-size: 2rem;
+    }
+
+    .result{
+        width: 100%;
+    }
+
+    .result p{
+        font-size: 1.2rem;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .win{
+        color: springgreen;
+    }
+
+    .draw{
+        color: yellow;
+    }
+
+    .lose{
+        color: #d72228;
+    }
+
+    h1{
+        text-align:center;
+        font-variant: small-caps;
+        letter-spacing: 2px;
+        color:#fff;
+        font-size: 16px;
+        font-family: 'robotolight';
+    }
+
+    .pipita{
+        width: 75%;
+        border: 5px solid white;
+    }
+
+    .nop{
+        text-align: center;
+    }
+
+    .novisible{
+        display: none;
+    }
+}

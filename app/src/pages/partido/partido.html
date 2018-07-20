@@ -1,0 +1,60 @@
+<!--
+  Generated template for the PartidoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-uppercase>predicciones de usuarios</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bg-01">
+  <ion-grid>
+      <ion-row class="row border_bottom" text-uppercase text-center justify-content-center align-items-center>
+          <ion-col col-3 text-center>
+              <p><img src="./assets/imgs/flags/{{infoPartido?.local}}.png" height="24"></p><p class="gold">{{infoPartido?.nombreLocal}}</p>
+          </ion-col>
+          <ion-col col-2 text-uppercase text-center>
+              <p class="txt_predicciones">{{infoPartido?.marcadorLocal}}</p>
+          </ion-col>
+          <ion-col col-2 text-uppercase class="gold">
+              <p>{{infoPartido?.fase}}</p>
+              <p>{{infoPartido?.fecha}}</p>
+          </ion-col>
+          <ion-col col-2 text-right>
+              <p class="txt_predicciones">{{infoPartido?.marcadorVisitante}}</p>
+          </ion-col>
+          <ion-col col-3 text-uppercase text-center>
+              <p><img src="./assets/imgs/flags/{{infoPartido?.visitante}}.png" height="24"></p><p class="gold">{{infoPartido?.nombreVisitante}}</p>
+          </ion-col>
+        </ion-row>
+
+        <ion-row class="row border_bottom" text-uppercase text-center justify-content-center align-items-center *ngFor="let prediccion of predicciones">
+            <ion-col col-3 text-center>
+                <p>{{prediccion.nombre}}</p>
+            </ion-col>
+            <ion-col col-2 text-uppercase text-center>
+                <p>{{prediccion.marcadorLocal}}</p>
+            </ion-col>
+            <ion-col col-2 text-uppercase class="gold">
+                <div [ngSwitch]="prediccion.result" [ngClass]="partidojugado == 0 ? 'novisible' : ''">
+                    <ion-icon *ngSwitchCase="1" class="win" ios="ios-done-all" md="md-done-all"></ion-icon>
+                    <ion-icon *ngSwitchCase="2" class="draw" ios="ios-checkmark" md="md-checkmark"></ion-icon>
+                    <ion-icon *ngSwitchCase="0" class="lose" ios="ios-close" md="md-close"></ion-icon>
+                </div>
+            </ion-col>
+            <ion-col col-2 text-right>
+                <p>{{prediccion.marcadorVisitante}}</p>
+            </ion-col>
+            <ion-col col-3 text-uppercase text-center>
+                
+            </ion-col>
+          </ion-row>
+        
+    </ion-grid>
+</ion-content>

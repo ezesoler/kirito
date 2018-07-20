@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-uppercase>
+        <img style="padding-top: 3px; float: right;" center src="./assets/imgs/logo_menu.png" height="50">
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg-01">
+  <p class="tit_presentacion"> bienvenido</p>
+  <p class="tit_presentacion-02">
+    ingresa tu email
+  </p>
+  <p class="tit_presentacion-02">
+    para darte de alta
+  </p>
+  <ion-item class="item">
+    <ion-label floating>Email</ion-label>
+    <ion-input type="email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+  <div>
+    <button ion-button color="light" block (click)="checkMail()">ENVIAR</button>
+  </div>
+
+</ion-content>

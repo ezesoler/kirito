@@ -1,0 +1,88 @@
+<!--
+  Generated template for the HoyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title text-uppercase>partidos de hoy</ion-title>
+    <ion-fab top right edge>
+        <button ion-fab mini  (click)="sendPredicciones()" [ngClass]="dia == 'hoy' ? 'novisible' : ''"><ion-icon name="icon-save"></ion-icon></button>
+    </ion-fab>
+  </ion-navbar>
+
+  <div class="tit_predicciones bgZonas">
+      <ion-segment [(ngModel)]="dia">
+          <ion-segment-button value="hoy">
+              HOY
+          </ion-segment-button>
+          <ion-segment-button value="maniana">
+              MAÑANA
+          </ion-segment-button>
+      </ion-segment>
+  </div>
+
+</ion-header>
+
+
+<ion-content class="bg-01">
+    <div [ngSwitch]="dia">
+      <div *ngSwitchCase="'hoy'">
+        <ion-grid>
+            <ion-row class="row" text-center *ngFor="let partido of partidos_hoy" justify-content-center align-items-center (click)="itemSelected(partido.id)">
+                <ion-col col-3 text-center>
+                    <p><img src="./assets/imgs/flags/{{partido.local}}.png" height="24"></p><p class="gold caps">{{partido.nombreLocal}}</p>
+                </ion-col>
+                <ion-col col-2 text-center>
+                    <ion-input type="number" tappable  text-center [(ngModel)]="partido.prediccionLocal" (ionChange)="hideKeyboard()" (focus)="selectedContent($event)" [disabled]="partido.habilitado == 0 ? 'true' : 'false'" [ngClass]="{'dis-input' : partido.habilitado == 0}"></ion-input>
+                </ion-col>
+                <ion-col text-uppercase col-2 class="gold fecha">
+                    <p>vs<span><div *ngIf= "partido.vivo == 1"><ion-icon class="live" name="football"></ion-icon></div></span><span>{{partido.hora}}</span></p>
+                </ion-col>
+                <ion-col col-2 text-right>
+                    <ion-input type="number" tappable  text-center [(ngModel)]="partido.prediccionVisitante" (ionChange)="hideKeyboard()" (focus)="selectedContent($event)" [disabled]="partido.habilitado == 0 ? 'true' : 'false'" [ngClass]="{'dis-input' : partido.habilitado == 0}"></ion-input>
+                </ion-col>
+                <ion-col col-3 text-center>
+                    <p><img src="./assets/imgs/flags/{{partido.visitante}}.png" height="24"></p><p class="gold caps">{{partido.nombreVisitante}}</p>
+                </ion-col> 
+                <div class="result" *ngIf= "partido.jugado == 1">
+                    <ion-row class="gold" justify-content-center align-items-center style="margin: 0 auto;border-bottom:none !important;">
+                              <p>resultado&nbsp;&nbsp;</p>
+                              <p>{{partido.marcadorLocal}}</p>
+                              <p> - </p>
+                              <p>{{partido.marcadorVisitante}}</p>
+                    </ion-row>
+                </div> 
+              </ion-row>
+          </ion-grid>
+      </div>
+
+      <div *ngSwitchCase="'maniana'">
+          <ion-grid>
+              <ion-row class="row" text-center *ngFor="let partido of partidos_maniana" justify-content-center align-items-center>
+                  <ion-col col-3 text-center>
+                      <p><img src="./assets/imgs/flags/{{partido.local}}.png" height="24"></p><p class="gold caps">{{partido.nombreLocal}}</p>
+                  </ion-col>
+                  <ion-col col-2 text-center>
+                      <ion-input type="number" tappable  text-center [(ngModel)]="resultados[partido.index].local" (ionChange)="hideKeyboard()" (focus)="selectedContent($event)" [disabled]="partido.habilitado == 0 ? 'true' : 'false'" [ngClass]="{'dis-input' : partido.habilitado == 0}"></ion-input>
+                  </ion-col>
+                  <ion-col text-uppercase col-2 class="gold fecha">
+                      <p>vs<span>{{partido.fecha}}</span><span>{{partido.hora}}</span></p>
+                  </ion-col>
+                  <ion-col col-2 text-right>
+                      <ion-input type="number" tappable  text-center [(ngModel)]="resultados[partido.index].visitante" (ionChange)="hideKeyboard()" (focus)="selectedContent($event)" [disabled]="partido.habilitado == 0 ? 'true' : 'false'" [ngClass]="{'dis-input' : partido.habilitado == 0}"></ion-input>
+                  </ion-col>
+                  <ion-col col-3 text-center>
+                      <p><img src="./assets/imgs/flags/{{partido.visitante}}.png" height="24"></p><p class="gold caps">{{partido.nombreVisitante}}</p>
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+
+      </div>
+</ion-content>

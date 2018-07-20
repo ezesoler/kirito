@@ -1,0 +1,34 @@
+<!--
+  Generated template for the NovedadesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <ion-title text-uppercase>Novedades</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="bg-01">
+  <ion-card *ngFor="let novedad of novedades">
+      <p class="fecha_nov">
+          {{novedad.fecha}}
+      </p>
+    <img src="{{path}}{{novedad.foto}}"/>
+    <ion-card-content>
+      
+      <ion-card-title>
+        {{novedad.titulo}}
+      </ion-card-title>
+      <p [innerHTML]="novedad.texto">
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

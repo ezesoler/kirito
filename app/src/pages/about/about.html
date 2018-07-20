@@ -1,0 +1,55 @@
+<!--
+  Generated template for the AboutPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title text-uppercase>Sobre la app</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="bg-01" padding>
+<h1>Kirito 1.{{versionApp}}</h1>
+<div class="logo">
+  <img (swipe)="easteregg($event)" center src="./assets/imgs/logo_creditos.png" height="150">
+</div>
+<p text-uppercase>Desarrollo:
+<span>Ezequiel "ciruja" Soler</span></p>
+<p text-uppercase>Diseño e intefaces:
+<span>Carlos "fresko" Armada</span></p>
+
+<ion-list>
+   <!-- <iframe width="560" height="315" [src]="tongo" frameborder="0" allowfullscreen></iframe> -->
+  <ion-item>
+    <h2 text-uppercase text-center>Tecnologías</h2>
+    <h3>API</h3>
+    <p>Slim framework</p>
+
+    <h3>APP</h3>
+    <p>Cordova & Ionic</p>
+
+    <h3>BD</h3>
+    <p>MySQL</p>
+
+    <h3>BACKEND</h3>
+    <p>CodeIgniter</p>
+
+    <h3>BAJO LICENCIA</h3>
+    <p>Apache License 2.0</p>
+  </ion-item>
+</ion-list>
+<div style="text-align: right;" (click)="mmlpqtp()">
+  <img src="./assets/imgs/codigo_barras.png" height="40">
+</div>
+<audio #audio>
+<source src="./assets/mmlpqtp.mp3" type="audio/mpeg">
+</audio>
+</ion-content>
